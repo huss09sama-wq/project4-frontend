@@ -1,39 +1,66 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-const Homepage = ({}) => {
+const Homepage = () => {
+    const isLoggedIn = !!localStorage.getItem('token');
+
     return (
-        <div>
-            <header>
-                <h1>Welcome to Developer library</h1>
-                <p>Your personal repository for tracking code snippets, logic flows, and architectural categories.</p>
-            </header>
-
-            <hr />
-
-            
-                <div>
-                    <h2>Workspace Dashboard</h2>
-                    <div>
-                        <h3>Manage Categories</h3>
-                        <p>Organize your code by framework, language, or system module.</p>
-                        <Link to="/categories">
-                            <button>Go to Categories</button>
-                        </Link>
-                    </div>
-
-                    <br />
-
-                    <div>
-                        <h3>Code Snippets</h3>
-                        <p>View, search, edit, or create your documented logic blocks.</p>
-                        <Link to="/snippets">
-                            <button>View Snippets</button>
-                        </Link>
-                    </div>
+        <div className="container">
+            <div className="hero-section">
+                <span className="hero-badge">// PRODUCTION PIPELINE READY</span>
+                <h1 className="hero-title">The Developer's Personal Code Infrastructure</h1>
+                <p className="hero-subtitle">
+                    A high-performance central repository built to organize source code assets, document execution blueprints, and manage logic pipelines in real-time.
+                </p>
+                <div className="hero-actions">
+                    {isLoggedIn ? (
+                        <Link to="/dashboard"><button className="btn-success">Go To Dashboard →</button></Link>
+                    ) : (
+                        <>
+                            <Link to="/register"><button className="btn-success">Deploy Account</button></Link>
+                            <Link to="/login"><button className="btn-primary" style={{ marginLeft: '15px' }}>Access Terminal</button></Link>
+                        </>
+                    )}
                 </div>
+            </div>
+
+            <div className="grid-3">
+                <div className="card feature-card">
+                    <div className="feature-icon">📁</div>
+                    <h3>Modular Repositories</h3>
+                    <p>Categorize core functions, hooks, middleware, and algorithms into clean, searchable infrastructure sections.</p>
+                </div>
+
+                <div className="card feature-card">
+                    <div className="feature-icon">⚙️</div>
+                    <h3>Execution Blueprints</h3>
+                    <p>Map out the internal logic flow step-by-step alongside your code to make future debugging instantaneous.</p>
+                </div>
+
+                <div className="card feature-card">
+                    <div className="feature-icon">⚡</div>
+                    <h3>Database Synchronized</h3>
+                    <p>Full CRUD state capabilities securely linked to your profile database for workspace persistence across screens.</p>
+                </div>
+            </div>
+
+            <div className="card terminal-preview">
+                <div className="terminal-header">
+                    <div className="terminal-dots">
+                        <span className="dot red"></span>
+                        <span className="dot yellow"></span>
+                        <span className="dot green"></span>
+                    </div>
+                    <span className="terminal-title">system_overview.log</span>
+                </div>
+                <div className="terminal-body">
+                    <p className="line-code"><span className="token-cmd">$</span> initialize --platform-status</p>
+                    <p className="line-success">✔ Central Core Connected Successfully</p>
+                    <p className="line-text">Database Sync: ACTIVE | Total Latency: 14ms | Global Scope: Full Width Enabled</p>
+                </div>
+            </div>
         </div>
     );
 };
 
-export default Homepage;
+export default Homepage

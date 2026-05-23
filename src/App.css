@@ -10,7 +10,6 @@
     margin-bottom: 20px;
 }
 
-/* Base Component Panels */
 .card {
     background-color: #151d30;
     border: 1px solid #2a3b5c;
@@ -22,15 +21,14 @@
 }
 
 .card-stat {
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-weight: 700;
     font-family: 'Courier New', Courier, monospace;
     color: #38bdf8;
-    text-shadow: 0 0 10px rgba(56, 189, 248, 0.3);
-    margin: 15px 0;
+    text-shadow: 0 0 12px rgba(56, 189, 248, 0.3);
+    margin: 10px 0;
 }
 
-/* Side-by-Side Flex Layout Configuration */
 .grid-2 {
     display: flex;
     gap: 20px;
@@ -43,11 +41,55 @@
     margin-bottom: 0;
 }
 
-/* Custom Button Color Themes */
+.grid-3 {
+    display: flex;
+    gap: 20px;
+    width: 100% !important;
+    margin-bottom: 40px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+}
+
+li {
+    background-color: #151d30 !important;
+    border: 1px solid #2a3b5c !important;
+    border-left: 4px solid #38bdf8 !important;
+    border-radius: 8px;
+    padding: 16px 20px;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    color: #f8fafc;
+    width: 100%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+}
+
+button, .btn-primary, .btn-success {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 10px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+    letter-spacing: 0.5px;
+}
+
 .btn-primary {
-    background-color: rgba(56, 189, 248, 0.15);
+    background-color: rgba(56, 189, 248, 0.12);
     color: #38bdf8;
-    border: 1px solid #38bdf8;
+    border: 1px solid rgba(56, 189, 248, 0.4);
 }
 
 .btn-primary:hover {
@@ -57,9 +99,9 @@
 }
 
 .btn-success {
-    background-color: rgba(52, 211, 153, 0.15);
+    background-color: rgba(52, 211, 153, 0.12);
     color: #34d399;
-    border: 1px solid #34d399;
+    border: 1px solid rgba(52, 211, 153, 0.4);
 }
 
 .btn-success:hover {
@@ -68,18 +110,156 @@
     box-shadow: 0 0 12px rgba(52, 211, 153, 0.4);
 }
 
-.btn-logout {
-    background-color: transparent;
-    color: #f87171;
-    border: 1px solid #f87171;
+li button, button[type="submit"] + button, .btn-danger {
+    background-color: rgba(248, 113, 113, 0.1) !important;
+    color: #f87171 !important;
+    border: 1px solid rgba(248, 113, 113, 0.3) !important;
 }
 
-.btn-logout:hover {
-    background-color: #f87171;
+li button:hover, button[type="submit"] + button:hover, .btn-danger:hover {
+    background-color: #f87171 !important;
+    color: #0b0f19 !important;
+    box-shadow: 0 0 12px rgba(248, 113, 113, 0.4) !important;
+}
+
+form button[type="submit"] {
+    background-color: rgba(56, 189, 248, 0.15);
+    color: #38bdf8;
+    border: 1px solid #38bdf8;
+    margin-top: 10px;
+}
+
+form button[type="submit"]:hover {
+    background-color: #38bdf8;
+    color: #0b0f19;
+    box-shadow: 0 0 12px rgba(56, 189, 248, 0.4);
+}
+
+.hero-section {
+    text-align: center;
+    padding: 70px 20px;
+    background: radial-gradient(circle at top, rgba(56, 189, 248, 0.06) 0%, transparent 65%);
+    border-radius: 16px;
+    margin-bottom: 40px;
+    border: 1px solid rgba(42, 59, 92, 0.4);
+}
+
+.hero-badge {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.85rem;
+    color: #38bdf8;
+    background: rgba(56, 189, 248, 0.1);
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    letter-spacing: 1px;
+}
+
+.hero-title {
+    font-size: 3.2rem !important;
+    font-weight: 800;
+    line-height: 1.15;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    letter-spacing: -1px;
+}
+
+.hero-subtitle {
+    max-width: 750px;
+    margin: 0 auto 30px auto !important;
+    font-size: 1.15rem !important;
+    color: #94a3b8;
+    line-height: 1.6;
+}
+
+.hero-actions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.feature-card {
+    flex: 1;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-4px);
+    border-color: #38bdf8;
+}
+
+.feature-icon {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.terminal-preview {
+    background-color: #05070f !important;
+    border: 1px solid #2a3b5c;
+    border-radius: 12px;
+    padding: 0 !important;
+    overflow: hidden;
+}
+
+.terminal-header {
+    background-color: #0b0f19;
+    border-bottom: 1px solid #2a3b5c;
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.terminal-dots {
+    display: flex;
+    gap: 8px;
+}
+
+.dot {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+}
+
+.dot.red { background-color: #f87171; }
+.dot.yellow { background-color: #fbbf24; }
+.dot.green { background-color: #34d399; }
+
+.terminal-title {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.85rem;
+    color: #94a3b8;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.terminal-body {
+    padding: 25px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.95rem;
+}
+
+.line-code {
     color: #f8fafc;
+    margin-bottom: 10px;
 }
 
-/* Navbar System Structure */
+.token-cmd {
+    color: #38bdf8;
+    user-select: none;
+}
+
+.line-success {
+    color: #34d399;
+    margin-bottom: 10px;
+}
+
+.line-text {
+    color: #64748b;
+    margin-bottom: 0;
+}
+
 .navbar-container {
     display: flex;
     justify-content: space-between;
@@ -103,20 +283,22 @@
     font-size: 0.9rem;
     font-weight: 500;
     font-family: 'Courier New', Courier, monospace;
-    margin-right: 20px;
+    margin-right: 25px;
     transition: color 0.2s;
 }
 
 .nav-item:hover {
     color: #38bdf8;
-    text-shadow: 0 0 8px rgba(56, 189, 248, 0.6);
+    text-shadow: 0 0 8px rgba(56, 189, 248, 0.5);
 }
 
 .nav-user {
     color: #38bdf8;
-    background: rgba(56, 189, 248, 0.1);
-    padding: 4px 10px;
+    background: rgba(56, 189, 248, 0.08);
+    padding: 5px 12px;
     border-radius: 6px;
     border: 1px solid rgba(56, 189, 248, 0.2);
     margin-right: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.85rem;
 }
