@@ -6,7 +6,7 @@ import SignIn from './pages/SignIn';
 import Navbar from './components/Navbar';
 import Dashboard from './pages/Dashboard';
 import Categories from './pages/Categories';
-import AddSnippet from './pages/AddSnippet';
+import AddSnippet from './pages/Addsnippet';
 import Allsnippets from './pages/Allsnippets';
 import SnippetDetails from './pages/SnippetDetails';
 import SnippetEdit from './pages/SnippetEdit';
