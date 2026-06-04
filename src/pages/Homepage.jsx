@@ -17,8 +17,8 @@ const Homepage = () => {
                         <Link to="/dashboard"><button className="btn-success">Go To Dashboard →</button></Link>
                     ) : (
                         <>
-                            <Link to="/register"><button className="btn-success">Deploy Account</button></Link>
-                            <Link to="/login"><button className="btn-primary" style={{ marginLeft: '15px' }}>Access Terminal</button></Link>
+                            <Link to="/sign-up"><button className="btn-success">Deploy Account</button></Link>
+                            <Link to="/sign-in"><button className="btn-primary" style={{ marginLeft: '15px' }}>Access Terminal</button></Link>
                         </>
                     )}
                 </div>
