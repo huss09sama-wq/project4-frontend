@@ -31,7 +31,7 @@ const AddSnippet = () => {
  const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-        const res = await fetch('http://localhost:3000/snippets', {
+        const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/snippets`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
